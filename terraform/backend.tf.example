@@ -1,0 +1,11 @@
+# Rename this file to backend.tf and fill in YOUR values
+# Created during Lab 5
+terraform {
+  backend "s3" {
+    bucket         = "acs730-<YOUR-NAME>-tfstate"
+    key            = "lab5/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "acs730-tf-locks"
+    encrypt        = true
+  }
+}
